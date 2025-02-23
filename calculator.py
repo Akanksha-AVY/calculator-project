@@ -3,42 +3,56 @@
 
 
 def add(a, b):
-        pass  # To be implemented by Developer 1
+    return a + b
 
 def subtract(a, b):
-        pass  # To be implemented by Developer 2
+    return a - b
                                         
 def multiply(a,b):
-        pass  # To be implemented by Developer 3
+    return a * b
 
 def divide(a,b):
-        pass  # To be implemented by Developer 4
+    if b == 0:
+        return("Error! Division by Zero.")
+    return a / b 
 
 
 def calculator():
-    print("\n------Calculator App------")
+    print("\n------Calculator App------\n")
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    print("4. Division")
+    print("5. Exit")
     
+        
+    while True:
+        choice = input("Enter your choice (1-5): ")
 
-choice = input("Enter your choice: ")
+        if choice == '5':
+            print("Exiting the Calculator. GoodBye! See you Again")
+            break  # exit the loop      
+       
+        if choice not in ('1', '2', '3', '4'):
+            print("Opps! Invalid choice! Please enter number between 1 - 5...!")
+            continue  # Ask for the input again
 
+        try:
+            num1 = float(input("Enter your 1st number: "))
+            num2 = float(input("Enter your 2nd number: "))
+        except ValueError:
+            print("Invalid inputs! please enter numeric values.")
+            continue  # ask for input again
 
-if choice not in ('1', '2', '3', '4', '5'):
-    print("Opps! Invalid choice! Please enter number between 1 - 5...!")
-    
+        if choice == '1':
+            print("Result : ", add(num1, num2))
+        elif choice == '2':
+            print("Result : ", subtract(num1, num2))
+        elif choice == '3':
+            print("Result : ", multiply(num1, num2))
+        elif choice == '4':
+            print("Result : ", divide(num1, num2))
+            
 
-if choice == '5':
-    print("Exiting the Calculator. Goodbye! See you next time!")
-   
-
-try:
-    num1 = float(input("Enter your 1st number: "))
-    num2 = float(input("Enter your 2nd number: "))
-
-
-except ValueError:
-    print("Invalid inputs! please enter numeric values.")
-    
-
-if ___name__ == "__main__":
-    calculator()
-
+if __name__ == "__main__":
+    calculator()                                                                                                                                                                                                                           
