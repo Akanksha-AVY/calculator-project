@@ -12,13 +12,18 @@ def multiply(a,b):
     return a * b
 
 def divide(a,b):
-    pass  # to be implemented by Developer 4
+    if b == 0:
+        return("Error! Division by Zero.")
+    return a / b 
+
 
 def calculator():
     print("\n------Calculator App------\n")
     print("1. Addition")
     print("2. Subtraction")
     print("3. Multiplication")
+    print("4. Division")
+    print("5. Exit")
     
         
     while True:
@@ -45,6 +50,8 @@ def calculator():
             print("Result : ", subtract(num1, num2))
         elif choice == '3':
             print("Result : ", multiply(num1, num2))
+        elif choice == '4':
+            print("Result : ", divide(num1, num2))
             
 
 if __name__ == "__main__":
