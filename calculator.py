@@ -3,7 +3,7 @@
 
 
 def add(a, b):
-        pass  # To be implemented by Developer 1
+        return a + b
 
 def subtract(a, b):
         pass  # To be implemented by Developer 2
