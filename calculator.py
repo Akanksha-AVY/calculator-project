@@ -9,16 +9,17 @@ def subtract(a, b):
     return a - b
                                         
 def multiply(a,b):
-    pass  # To be implemented by Developer 3
+    return a * b
 
 def divide(a,b):
-    pass  # To be implemented by Developer 4
-
+    pass  # to be implemented by Developer 4
 
 def calculator():
     print("\n------Calculator App------\n")
     print("1. Addition")
     print("2. Subtraction")
+    print("3. Multiplication")
+    
         
     while True:
         choice = input("Enter your choice (1-5): ")
@@ -42,6 +43,8 @@ def calculator():
             print("Result : ", add(num1, num2))
         elif choice == '2':
             print("Result : ", subtract(num1, num2))
+        elif choice == '3':
+            print("Result : ", multiply(num1, num2))
             
 
 if __name__ == "__main__":
